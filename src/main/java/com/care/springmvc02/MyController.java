@@ -34,6 +34,10 @@ public class MyController {
 		System.out.println("name: "+member.getName());
 		System.out.println("name: "+member.getAge());
 		System.out.println("name: "+member.getAddr());
+		//Member에 자동으로 들어가 있음을 알 수 있음
+		
+		model.addAttribute("mem",member);
+		//Model에 member를 넣어서 값을 넘겨주기
 		return "member3/result";
 	}
 }
