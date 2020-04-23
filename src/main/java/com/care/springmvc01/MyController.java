@@ -2,7 +2,9 @@ package com.care.springmvc01;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MyController {
@@ -13,7 +15,7 @@ public class MyController {
 
 	}
 	
-	@RequestMapping(value = "/logout")
+	@GetMapping(value = "/logout")		//get방식으로 처리해주겠다
 	public String memberLogout(Model model) {
 		model.addAttribute("logout","로그아웃");
 		
@@ -22,4 +24,11 @@ public class MyController {
 		return "/member/logout";
 	}
 	
+	@RequestMapping("login")
+	public ModelAndView memberLogin() {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("login","로그인 성공");
+		mv.setViewName("member/login");
+		return mv;	
+	}
 }

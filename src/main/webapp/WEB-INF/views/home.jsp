@@ -10,5 +10,7 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+	<a href="login">Go to login.jsp</a><br>
+	<a href="logout">Go to logout.jsp</a>
 </body>
 </html>
