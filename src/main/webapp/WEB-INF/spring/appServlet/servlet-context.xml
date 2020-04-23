@@ -21,7 +21,10 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- 컨트롤러의 이름이 같아 일단 기본 패키지는 주석처리 해줌
 	<context:component-scan base-package="com.care.springmvc01" />
+	 -->
+	<context:component-scan base-package="com.care.springmvc02" />
 	
 	
 	
