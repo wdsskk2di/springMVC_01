@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Handles requests for the application home page.
  */
-@Controller
+@Controller	//spring 실행 시 어노테이션을 우선 인식
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -22,7 +22,8 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)	//여기에 경로를 지정. / == 경로가 없다는 것 ..http://localhost:8088/springmvc01/
+				// value를 /aaa라고 변경하면 -> http://localhost:8088/springmvc01/aaa라고 aaa를 붙여줘야 찾아감
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
@@ -33,7 +34,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "home";	//jsp 파일명. views의 home.jsp파일
 	}
 	
 }
