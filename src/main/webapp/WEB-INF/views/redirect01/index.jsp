@@ -8,6 +8,8 @@
 </head>
 <body>index.jsp<br>
 
+<img src="resources/min.jpg"/>
+
 <form action="result02">
 	ID: <input type="text" name="id"><br>
 	<input type="submit" value="전송"><br>	

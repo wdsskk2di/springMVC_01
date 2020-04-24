@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>rsNO.jsp<br>
-<h1>실패입니다</h1>
+	<h1>실패입니다</h1>
+	***test: ${test }
 </body>
 </html>

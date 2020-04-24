@@ -22,7 +22,10 @@ public class RedirectController {
 		System.out.println("id: "+id);
 		
 		//model.addAttribute("test", "연습중");	//2.
-		ra.addAttribute("test", "ra로 넘어온 값");  //3.
+		ra.addAttribute("test", "ra로 넘어온 값");  //3. (***rsNo.jsp까지는 값이 못 넘어감)
+		
+		//***5.rsNo.jsp 까지 값이 넘어감.(아래 request.getAttribute에서는 출력 안됨)
+		ra.addFlashAttribute("test", "ra로 넘어온 값");
 		
 		if(id.equals("abc")) {			//*redirect를 쓰는 이유?
 			return "redirect:rsOK";		//*해당 url을 찾아가라. -> 전달할게 있는 상황이라면? 아래 rsOK를 거쳐서 정보를 전달할 수 있음
