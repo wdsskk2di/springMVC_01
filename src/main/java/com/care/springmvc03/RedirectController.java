@@ -41,8 +41,9 @@ public class RedirectController {
 	@RequestMapping("rsNo")	//4.requestParam 추가
 	public String rsNo(@RequestParam("test") String aaa, Model model, HttpServletRequest request) {	//
 		System.out.println("rep: "+request.getAttribute("test"));	//2. null이 출력됨. 위 result에서 model에 저장한 값을 받아오지 못한다는 것
-		System.out.println("rep: "+request.getParameter("test"));	//2. 3. 값이 출력됨! 위 result에서 model에 저장한 값을 받아올 수 있다.
-		System.out.println("@RequestParam(\"test\") String aaa: "+aaa);	//4.
+		System.out.println("rep: "+request.getParameter("test"));	/*2. 값이 출력됨! 위 result에서 model에 저장한 값을 받아올 수 있다.
+																	  3. 값이 출력됨! 위 result에서 ra에 저장한 값을 받아올 수 있다.*/
+		System.out.println("@RequestParam(\"test\") String aaa: "+aaa);	//4. 위 result에서 ra에 저장한 값을 가져와 출력할 수 있음
 		return "redirect01/rsNo";
 	}
 }
