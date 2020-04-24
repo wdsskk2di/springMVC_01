@@ -18,7 +18,7 @@ public class QuizController {
 	}
 	
 	@RequestMapping("mvc_ex04/result03")
-	public String quizResult(Model model, HttpServletRequest request) {
+	public String quizResult(HttpServletRequest request) {
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 
