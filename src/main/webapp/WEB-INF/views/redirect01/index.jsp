@@ -8,7 +8,7 @@
 </head>
 <body>index.jsp<br>
 
-<form action="result">
+<form action="result02">
 	ID: <input type="text" name="id"><br>
 	<input type="submit" value="전송"><br>	
 </form>

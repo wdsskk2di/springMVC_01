@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-
+<body>rsNO.jsp<br>
+<h1>실패입니다</h1>
 </body>
 </html>
