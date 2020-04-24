@@ -16,7 +16,7 @@ public class RedirectController {
 		return "redirect01/index";
 	}
 	
-	@RequestMapping("result02")	//1.Http 2.Model 추가 3.Redirect 추가(사용 빈도 낮음)
+	@RequestMapping("result02")	//1.Http  2.Model 추가  3.Redirect 추가(사용 빈도 낮음)
 	public String result(Model model, HttpServletRequest request, RedirectAttributes ra) {
 		String id = request.getParameter("id");
 		System.out.println("id: "+id);
@@ -24,18 +24,18 @@ public class RedirectController {
 		//model.addAttribute("test", "연습중");	//2.
 		ra.addAttribute("test", "ra로 넘어온 값");  //3.
 		
-		if(id.equals("abc")) {
-			return "redirect:rsOK";	//*해당 url을 찾아가라. -> 전달할게 있는 상황이라면? 아래 rsOK를 거쳐서 정보를 전달할 수 있음
-			//return "redirect/rsOK";	**해당 경로를 직접 찾아가라. -> 전달할게 있는 상황이라면? 정보를 전달하지 못함. 단순 이동만..
+		if(id.equals("abc")) {			//*redirect를 쓰는 이유?
+			return "redirect:rsOK";		//*해당 url을 찾아가라. -> 전달할게 있는 상황이라면? 아래 rsOK를 거쳐서 정보를 전달할 수 있음
+			//return "redirect/rsOK";	 **해당 경로를 직접 찾아가라. -> 전달할게 있는 상황이라면? 정보를 전달하지 못함. 단순 이동만..
 		}else {
 			return "redirect:rsNo";
 		}		
 	}
 	
-	@RequestMapping("rsOK")	//*해당 url로 오면
+	@RequestMapping("rsOK")					//*해당 url로 오면
 	public String rsOk(Model model) {
-		model.addAttribute("name", "하나");
-		return "redirect01/rsOK";	//*이 경로로 가라
+		model.addAttribute("name", "하나");	//*이 값을 가지고
+		return "redirect01/rsOK";			//*이 경로로 가라
 	}
 	
 	@RequestMapping("rsNo")	//4.requestParam 추가
