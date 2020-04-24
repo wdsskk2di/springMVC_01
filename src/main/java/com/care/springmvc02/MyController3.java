@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.care.member.Member;
 
 @Controller
-public class MyController {
+public class MyController3 {
 	
-	@RequestMapping("index")
+	@RequestMapping("index01")
 	public String memberIndex() {
 		return "member3/index";
 	}
